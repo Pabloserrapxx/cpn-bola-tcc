@@ -1,0 +1,102 @@
+{
+  "name": "Juice Shop — Manipulate Basket",
+  "initial_places": [
+    "p_user"
+  ],
+  "places": [
+    "p_user",
+    "p:[\"basket\", \"body\", \"/BasketId\"]"
+  ],
+  "marking": {
+    "p_user": [
+      {
+        "color": "USER",
+        "value": "alice"
+      }
+    ],
+    "p:[\"basket\", \"body\", \"/BasketId\"]": []
+  },
+  "transitions": {
+    "post-/rest/user/login-200": {
+      "operation": "login",
+      "method": "post",
+      "path": "/rest/user/login",
+      "status": "200",
+      "guards": "schemas de requisição/parâmetros",
+      "checks": {}
+    },
+    "post-/api/BasketItems-200": {
+      "operation": "basket",
+      "method": "post",
+      "path": "/api/BasketItems",
+      "status": "200",
+      "guards": "schemas de requisição/parâmetros",
+      "checks": {
+        "/data/BasketId": "$request.body#/BasketId"
+      }
+    }
+  },
+  "arcs": [
+    {
+      "source": "p_user",
+      "target": "post-/rest/user/login-200",
+      "label": "USER"
+    },
+    {
+      "source": "post-/rest/user/login-200",
+      "target": "p_user",
+      "label": "USER"
+    },
+    {
+      "source": "post-/rest/user/login-200",
+      "target": "p:[\"basket\", \"body\", \"/BasketId\"]",
+      "label": "$response.body#/authentication/bid"
+    },
+    {
+      "source": "p_user",
+      "target": "post-/api/BasketItems-200",
+      "label": "USER"
+    },
+    {
+      "source": "post-/api/BasketItems-200",
+      "target": "p_user",
+      "label": "USER"
+    },
+    {
+      "source": "p:[\"basket\", \"body\", \"/BasketId\"]",
+      "target": "post-/api/BasketItems-200",
+      "label": "body:/BasketId"
+    },
+    {
+      "source": "post-/api/BasketItems-200",
+      "target": "p:[\"basket\", \"body\", \"/BasketId\"]",
+      "label": "preserva recurso"
+    }
+  ],
+  "event_only_arcs": true,
+  "omitted_activities": [],
+  "fields": {
+    "p:[\"basket\", \"body\", \"/BasketId\"]": {
+      "operation": "basket",
+      "location": "body",
+      "name": "/BasketId",
+      "schema": {
+        "type": "integer",
+        "minimum": 1
+      }
+    }
+  },
+  "routes": [
+    {
+      "method": "post",
+      "path": "/rest/user/login",
+      "parameters": []
+    },
+    {
+      "method": "post",
+      "path": "/api/BasketItems",
+      "parameters": []
+    }
+  ],
+  "legacy_expressions": false
+}

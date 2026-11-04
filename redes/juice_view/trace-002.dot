@@ -1,0 +1,15 @@
+digraph CPN {
+rankdir=LR;
+node [fontname="sans-serif"];
+n0 [shape=ellipse, label="p_user\n1 token(s)"];
+n1 [shape=ellipse, label="p:[\"basket\", \"path\", \"id\"]\n0 token(s)"];
+n2 [shape=box, label="post-/rest/user/login-200"];
+n3 [shape=box, label="get-/rest/basket/{id}-200"];
+n0 -> n2 [label="USER"];
+n2 -> n0 [label="USER"];
+n2 -> n1 [label="$response.body#/authentication/bid"];
+n0 -> n3 [label="USER"];
+n3 -> n0 [label="USER"];
+n1 -> n3 [label="path:id"];
+n3 -> n1 [label="preserva recurso"];
+}

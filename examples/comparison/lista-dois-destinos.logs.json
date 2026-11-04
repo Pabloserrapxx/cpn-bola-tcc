@@ -1,0 +1,27 @@
+[
+  {
+    "method": "GET",
+    "uri": "/memos",
+    "statusCode": 200,
+    "ip": "alice",
+    "message": "GET /memos 200",
+    "requestBody": {},
+    "responseBody": [
+      {
+        "id": "4"
+      },
+      {
+        "id": "6"
+      }
+    ]
+  },
+  {
+    "method": "PATCH",
+    "uri": "/other/4",
+    "statusCode": 200,
+    "ip": "alice",
+    "message": "PATCH /other/4 200",
+    "requestBody": {},
+    "responseBody": {}
+  }
+]

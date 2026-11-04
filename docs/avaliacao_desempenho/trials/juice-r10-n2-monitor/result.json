@@ -1,0 +1,182 @@
+{
+  "app": "juice",
+  "mode": "monitor",
+  "target_rps": 10,
+  "duration_seconds": 3,
+  "workers": 16,
+  "summary": {
+    "requests": 30,
+    "successes": 30,
+    "http_statuses": {
+      "200": 30
+    },
+    "transport_errors": 0,
+    "invalid_bodies": 0,
+    "elapsed_seconds": 3,
+    "completed_rps": 10.0,
+    "successful_rps": 10.0,
+    "success_fraction": 1.0,
+    "latency_ms": {
+      "count": 30,
+      "mean": 24.247439333333332,
+      "p50": 25.111931,
+      "p95": 29.151582,
+      "p99": 31.08946,
+      "min": 16.415612,
+      "max": 31.08946
+    },
+    "successful_latency_ms": {
+      "count": 30,
+      "mean": 24.247439333333332,
+      "p50": 25.111931,
+      "p95": 29.151582,
+      "p99": 31.08946,
+      "min": 16.415612,
+      "max": 31.08946
+    },
+    "service_ms": {
+      "count": 30,
+      "mean": 24.0485411,
+      "p50": 24.9014605,
+      "p95": 28.978787,
+      "p99": 30.923552,
+      "min": 16.278418,
+      "max": 30.923552
+    },
+    "client_queue_ms": {
+      "count": 30,
+      "mean": 0.19889823333333334,
+      "p50": 0.185463,
+      "p95": 0.269065,
+      "p99": 0.284396,
+      "min": 0.115747,
+      "max": 0.284396
+    }
+  },
+  "warmup": {
+    "requests": 10,
+    "successes": 10,
+    "http_statuses": {
+      "200": 10
+    },
+    "transport_errors": 0,
+    "invalid_bodies": 0,
+    "elapsed_seconds": 1,
+    "completed_rps": 10.0,
+    "successful_rps": 10.0,
+    "success_fraction": 1.0,
+    "latency_ms": {
+      "count": 10,
+      "mean": 25.2840235,
+      "p50": 26.9109765,
+      "p95": 29.002836,
+      "p99": 29.002836,
+      "min": 17.004997,
+      "max": 29.002836
+    },
+    "successful_latency_ms": {
+      "count": 10,
+      "mean": 25.2840235,
+      "p50": 26.9109765,
+      "p95": 29.002836,
+      "p99": 29.002836,
+      "min": 17.004997,
+      "max": 29.002836
+    },
+    "service_ms": {
+      "count": 10,
+      "mean": 25.094389800000002,
+      "p50": 26.679002500000003,
+      "p95": 28.838538,
+      "p99": 28.838538,
+      "min": 16.889656,
+      "max": 28.838538
+    },
+    "client_queue_ms": {
+      "count": 10,
+      "mean": 0.1896337,
+      "p50": 0.1852045,
+      "p95": 0.261759,
+      "p99": 0.261759,
+      "min": 0.115341,
+      "max": 0.261759
+    }
+  },
+  "resources": {
+    "api": {
+      "cpu_seconds": 0.7800000000000002,
+      "cpu_percent_one_core": 25.98115959757049,
+      "rss_start_bytes": 226693120,
+      "rss_end_bytes": 231174144,
+      "sampled_peak_rss_bytes": 231174144,
+      "samples": 31
+    },
+    "proxy": {
+      "cpu_seconds": 0.13,
+      "cpu_percent_one_core": 4.330193266261746,
+      "rss_start_bytes": 77172736,
+      "rss_end_bytes": 77336576,
+      "sampled_peak_rss_bytes": 77336576,
+      "samples": 31
+    }
+  },
+  "internal": {
+    "observed": 30,
+    "expected_http_responses": 30,
+    "complete": true,
+    "classifications": {
+      "fired": 30
+    },
+    "replay_ms": {
+      "count": 30,
+      "mean": 0.41467573333333335,
+      "p50": 0.3822325,
+      "p95": 0.586801,
+      "p99": 0.768374,
+      "min": 0.342943,
+      "max": 0.768374
+    },
+    "fired_replay_ms": {
+      "count": 30,
+      "mean": 0.41467573333333335,
+      "p50": 0.3822325,
+      "p95": 0.586801,
+      "p99": 0.768374,
+      "min": 0.342943,
+      "max": 0.768374
+    },
+    "monitor_ms": {
+      "count": 30,
+      "mean": 0.4866834,
+      "p50": 0.446924,
+      "p95": 0.68151,
+      "p99": 0.837187,
+      "min": 0.405692,
+      "max": 0.837187
+    }
+  },
+  "final_state": {
+    "sessions": 1,
+    "tokens": 2,
+    "counts": {
+      "events": 41,
+      "fired": 41,
+      "divergent": 0,
+      "outside_model": 0,
+      "not_processed": 0,
+      "capture_error": 0,
+      "transport_error": 0,
+      "expired_sessions": 0
+    }
+  },
+  "application": {
+    "host_pid": 1713608,
+    "image_id": "sha256:b3449813580486f9f1087fba1c08f730df500a53abc394f61653cf716d467513",
+    "image_reference": "bkimminich/juice-shop@sha256:b3449813580486f9f1087fba1c08f730df500a53abc394f61653cf716d467513",
+    "memos_commit": null,
+    "app_version": "14.1.1",
+    "mode": "default"
+  },
+  "repetition": 2,
+  "order_index": 0
+}

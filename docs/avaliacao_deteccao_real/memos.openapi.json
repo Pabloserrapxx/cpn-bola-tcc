@@ -1,0 +1,162 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Memos — listar/criar/arquivar",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/memo": {
+      "get": {
+        "operationId": "listMemos",
+        "responses": {
+          "200": {
+            "description": "Resposta modelada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ]
+                  }
+                }
+              }
+            },
+            "links": {
+              "archive": {
+                "operationId": "patchMemo",
+                "parameters": {
+                  "memoId": "$response.body#/id"
+                },
+                "x-cpn-many": true
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createMemo",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "content": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "content"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resposta modelada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": 1
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              }
+            },
+            "links": {
+              "archive": {
+                "operationId": "patchMemo",
+                "parameters": {
+                  "memoId": "$response.body#/id"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/memo/{memoId}": {
+      "patch": {
+        "operationId": "patchMemo",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memoId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "rowStatus": {
+                    "type": "string",
+                    "enum": [
+                      "NORMAL",
+                      "ARCHIVED"
+                    ]
+                  }
+                },
+                "required": [
+                  "rowStatus"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resposta modelada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "rowStatus": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "rowStatus"
+                  ]
+                }
+              }
+            },
+            "x-cpn-equals": {
+              "/id": "$request.path.memoId",
+              "/rowStatus": "$request.body#/rowStatus"
+            }
+          }
+        }
+      }
+    }
+  }
+}

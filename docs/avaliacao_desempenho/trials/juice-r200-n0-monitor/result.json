@@ -1,0 +1,182 @@
+{
+  "app": "juice",
+  "mode": "monitor",
+  "target_rps": 200,
+  "duration_seconds": 3,
+  "workers": 16,
+  "summary": {
+    "requests": 600,
+    "successes": 600,
+    "http_statuses": {
+      "200": 600
+    },
+    "transport_errors": 0,
+    "invalid_bodies": 0,
+    "elapsed_seconds": 6.915072108,
+    "completed_rps": 86.76699109266902,
+    "successful_rps": 86.76699109266902,
+    "success_fraction": 1.0,
+    "latency_ms": {
+      "count": 600,
+      "mean": 2357.2614349733335,
+      "p50": 2628.8957735,
+      "p95": 3864.490227,
+      "p99": 3953.22742,
+      "min": 157.156091,
+      "max": 3980.213517
+    },
+    "successful_latency_ms": {
+      "count": 600,
+      "mean": 2357.2614349733335,
+      "p50": 2628.8957735,
+      "p95": 3864.490227,
+      "p99": 3953.22742,
+      "min": 157.156091,
+      "max": 3980.213517
+    },
+    "service_ms": {
+      "count": 600,
+      "mean": 182.62895416333333,
+      "p50": 164.79636549999998,
+      "p95": 313.019761,
+      "p99": 388.729893,
+      "min": 69.58937,
+      "max": 577.700767
+    },
+    "client_queue_ms": {
+      "count": 600,
+      "mean": 2174.63248081,
+      "p50": 2432.5009115000003,
+      "p95": 3695.87965,
+      "p99": 3802.950506,
+      "min": 0.072618,
+      "max": 3850.482738
+    }
+  },
+  "warmup": {
+    "requests": 10,
+    "successes": 10,
+    "http_statuses": {
+      "200": 10
+    },
+    "transport_errors": 0,
+    "invalid_bodies": 0,
+    "elapsed_seconds": 1,
+    "completed_rps": 10.0,
+    "successful_rps": 10.0,
+    "success_fraction": 1.0,
+    "latency_ms": {
+      "count": 10,
+      "mean": 26.3583515,
+      "p50": 26.157226,
+      "p95": 33.363127,
+      "p99": 33.363127,
+      "min": 20.185114,
+      "max": 33.363127
+    },
+    "successful_latency_ms": {
+      "count": 10,
+      "mean": 26.3583515,
+      "p50": 26.157226,
+      "p95": 33.363127,
+      "p99": 33.363127,
+      "min": 20.185114,
+      "max": 33.363127
+    },
+    "service_ms": {
+      "count": 10,
+      "mean": 26.0062938,
+      "p50": 25.91968,
+      "p95": 33.193329,
+      "p99": 33.193329,
+      "min": 19.986726,
+      "max": 33.193329
+    },
+    "client_queue_ms": {
+      "count": 10,
+      "mean": 0.3520577,
+      "p50": 0.19918000000000002,
+      "p95": 1.662326,
+      "p99": 1.662326,
+      "min": 0.140016,
+      "max": 1.662326
+    }
+  },
+  "resources": {
+    "api": {
+      "cpu_seconds": 8.92,
+      "cpu_percent_one_core": 128.94409829623712,
+      "rss_start_bytes": 228663296,
+      "rss_end_bytes": 382074880,
+      "sampled_peak_rss_bytes": 382074880,
+      "samples": 70
+    },
+    "proxy": {
+      "cpu_seconds": 1.68,
+      "cpu_percent_one_core": 24.285435553551387,
+      "rss_start_bytes": 77033472,
+      "rss_end_bytes": 79011840,
+      "sampled_peak_rss_bytes": 79011840,
+      "samples": 70
+    }
+  },
+  "internal": {
+    "observed": 600,
+    "expected_http_responses": 600,
+    "complete": true,
+    "classifications": {
+      "fired": 600
+    },
+    "replay_ms": {
+      "count": 600,
+      "mean": 0.45882482,
+      "p50": 0.4128045,
+      "p95": 0.672101,
+      "p99": 0.836354,
+      "min": 0.257032,
+      "max": 3.445594
+    },
+    "fired_replay_ms": {
+      "count": 600,
+      "mean": 0.45882482,
+      "p50": 0.4128045,
+      "p95": 0.672101,
+      "p99": 0.836354,
+      "min": 0.257032,
+      "max": 3.445594
+    },
+    "monitor_ms": {
+      "count": 600,
+      "mean": 0.5463325183333333,
+      "p50": 0.49081300000000005,
+      "p95": 0.783716,
+      "p99": 0.973529,
+      "min": 0.296159,
+      "max": 5.397754
+    }
+  },
+  "final_state": {
+    "sessions": 1,
+    "tokens": 2,
+    "counts": {
+      "events": 611,
+      "fired": 611,
+      "divergent": 0,
+      "outside_model": 0,
+      "not_processed": 0,
+      "capture_error": 0,
+      "transport_error": 0,
+      "expired_sessions": 0
+    }
+  },
+  "application": {
+    "host_pid": 1728365,
+    "image_id": "sha256:b3449813580486f9f1087fba1c08f730df500a53abc394f61653cf716d467513",
+    "image_reference": "bkimminich/juice-shop@sha256:b3449813580486f9f1087fba1c08f730df500a53abc394f61653cf716d467513",
+    "memos_commit": null,
+    "app_version": "14.1.1",
+    "mode": "default"
+  },
+  "repetition": 0,
+  "order_index": 1
+}

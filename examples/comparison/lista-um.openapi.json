@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Controlled comparison",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/memos": {
+      "get": {
+        "operationId": "listMemos",
+        "responses": {
+          "200": {
+            "description": "Controlled response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "links": {
+              "patch": {
+                "operationId": "patchMemo",
+                "parameters": {
+                  "id": "$response.body#/id"
+                },
+                "x-cpn-many": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "/memos/{id}": {
+      "patch": {
+        "operationId": "patchMemo",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Controlled response"
+          }
+        }
+      }
+    }
+  }
+}

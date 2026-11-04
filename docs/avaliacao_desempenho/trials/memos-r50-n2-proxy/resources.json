@@ -1,0 +1,425 @@
+{
+  "summary": {
+    "api": {
+      "cpu_seconds": 0.31999999999999995,
+      "cpu_percent_one_core": 10.660433628388917,
+      "rss_start_bytes": 32514048,
+      "rss_end_bytes": 38617088,
+      "sampled_peak_rss_bytes": 38617088,
+      "samples": 31
+    },
+    "proxy": {
+      "cpu_seconds": 0.49,
+      "cpu_percent_one_core": 16.32378899347053,
+      "rss_start_bytes": 73502720,
+      "rss_end_bytes": 73961472,
+      "sampled_peak_rss_bytes": 73961472,
+      "samples": 31
+    }
+  },
+  "samples": [
+    {
+      "at_ns": 100554986855432,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.25,
+          "rss_bytes": 32514048
+        },
+        "proxy": {
+          "cpu_seconds": 0.48,
+          "rss_bytes": 73502720
+        }
+      }
+    },
+    {
+      "at_ns": 100555087778913,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.26,
+          "rss_bytes": 33042432
+        },
+        "proxy": {
+          "cpu_seconds": 0.51,
+          "rss_bytes": 73531392
+        }
+      }
+    },
+    {
+      "at_ns": 100555188669864,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.27,
+          "rss_bytes": 33492992
+        },
+        "proxy": {
+          "cpu_seconds": 0.52,
+          "rss_bytes": 73568256
+        }
+      }
+    },
+    {
+      "at_ns": 100555289249381,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.28,
+          "rss_bytes": 33906688
+        },
+        "proxy": {
+          "cpu_seconds": 0.54,
+          "rss_bytes": 73588736
+        }
+      }
+    },
+    {
+      "at_ns": 100555389844511,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.29,
+          "rss_bytes": 34562048
+        },
+        "proxy": {
+          "cpu_seconds": 0.55,
+          "rss_bytes": 73613312
+        }
+      }
+    },
+    {
+      "at_ns": 100555490505620,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.31,
+          "rss_bytes": 34725888
+        },
+        "proxy": {
+          "cpu_seconds": 0.57,
+          "rss_bytes": 73625600
+        }
+      }
+    },
+    {
+      "at_ns": 100555591203713,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.32,
+          "rss_bytes": 34951168
+        },
+        "proxy": {
+          "cpu_seconds": 0.59,
+          "rss_bytes": 73662464
+        }
+      }
+    },
+    {
+      "at_ns": 100555691781334,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.33,
+          "rss_bytes": 35110912
+        },
+        "proxy": {
+          "cpu_seconds": 0.61,
+          "rss_bytes": 73682944
+        }
+      }
+    },
+    {
+      "at_ns": 100555792433546,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.34,
+          "rss_bytes": 35299328
+        },
+        "proxy": {
+          "cpu_seconds": 0.63,
+          "rss_bytes": 73699328
+        }
+      }
+    },
+    {
+      "at_ns": 100555893121962,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.35,
+          "rss_bytes": 35483648
+        },
+        "proxy": {
+          "cpu_seconds": 0.64,
+          "rss_bytes": 73711616
+        }
+      }
+    },
+    {
+      "at_ns": 100555993838236,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.37,
+          "rss_bytes": 35631104
+        },
+        "proxy": {
+          "cpu_seconds": 0.66,
+          "rss_bytes": 73719808
+        }
+      }
+    },
+    {
+      "at_ns": 100556094177154,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.37,
+          "rss_bytes": 35868672
+        },
+        "proxy": {
+          "cpu_seconds": 0.67,
+          "rss_bytes": 73728000
+        }
+      }
+    },
+    {
+      "at_ns": 100556195349084,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.38,
+          "rss_bytes": 36061184
+        },
+        "proxy": {
+          "cpu_seconds": 0.68,
+          "rss_bytes": 73744384
+        }
+      }
+    },
+    {
+      "at_ns": 100556295763637,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.39,
+          "rss_bytes": 36282368
+        },
+        "proxy": {
+          "cpu_seconds": 0.7,
+          "rss_bytes": 73752576
+        }
+      }
+    },
+    {
+      "at_ns": 100556396369817,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.4,
+          "rss_bytes": 36487168
+        },
+        "proxy": {
+          "cpu_seconds": 0.71,
+          "rss_bytes": 73764864
+        }
+      }
+    },
+    {
+      "at_ns": 100556497061817,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.41,
+          "rss_bytes": 36728832
+        },
+        "proxy": {
+          "cpu_seconds": 0.73,
+          "rss_bytes": 73773056
+        }
+      }
+    },
+    {
+      "at_ns": 100556597617360,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.43,
+          "rss_bytes": 37122048
+        },
+        "proxy": {
+          "cpu_seconds": 0.74,
+          "rss_bytes": 73781248
+        }
+      }
+    },
+    {
+      "at_ns": 100556698284294,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.43,
+          "rss_bytes": 37261312
+        },
+        "proxy": {
+          "cpu_seconds": 0.77,
+          "rss_bytes": 73797632
+        }
+      }
+    },
+    {
+      "at_ns": 100556798698176,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.44,
+          "rss_bytes": 37429248
+        },
+        "proxy": {
+          "cpu_seconds": 0.78,
+          "rss_bytes": 73809920
+        }
+      }
+    },
+    {
+      "at_ns": 100556899232898,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.46,
+          "rss_bytes": 37527552
+        },
+        "proxy": {
+          "cpu_seconds": 0.8,
+          "rss_bytes": 73830400
+        }
+      }
+    },
+    {
+      "at_ns": 100556999914524,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.47,
+          "rss_bytes": 37621760
+        },
+        "proxy": {
+          "cpu_seconds": 0.81,
+          "rss_bytes": 73846784
+        }
+      }
+    },
+    {
+      "at_ns": 100557100519665,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.48,
+          "rss_bytes": 37724160
+        },
+        "proxy": {
+          "cpu_seconds": 0.83,
+          "rss_bytes": 73854976
+        }
+      }
+    },
+    {
+      "at_ns": 100557200968648,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.49,
+          "rss_bytes": 37822464
+        },
+        "proxy": {
+          "cpu_seconds": 0.84,
+          "rss_bytes": 73863168
+        }
+      }
+    },
+    {
+      "at_ns": 100557301487453,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.5,
+          "rss_bytes": 37949440
+        },
+        "proxy": {
+          "cpu_seconds": 0.86,
+          "rss_bytes": 73875456
+        }
+      }
+    },
+    {
+      "at_ns": 100557401982629,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.51,
+          "rss_bytes": 38031360
+        },
+        "proxy": {
+          "cpu_seconds": 0.87,
+          "rss_bytes": 73895936
+        }
+      }
+    },
+    {
+      "at_ns": 100557502424800,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.53,
+          "rss_bytes": 38105088
+        },
+        "proxy": {
+          "cpu_seconds": 0.89,
+          "rss_bytes": 73904128
+        }
+      }
+    },
+    {
+      "at_ns": 100557602948100,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.53,
+          "rss_bytes": 38232064
+        },
+        "proxy": {
+          "cpu_seconds": 0.9,
+          "rss_bytes": 73916416
+        }
+      }
+    },
+    {
+      "at_ns": 100557703454593,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.54,
+          "rss_bytes": 38334464
+        },
+        "proxy": {
+          "cpu_seconds": 0.92,
+          "rss_bytes": 73928704
+        }
+      }
+    },
+    {
+      "at_ns": 100557803882552,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.56,
+          "rss_bytes": 38477824
+        },
+        "proxy": {
+          "cpu_seconds": 0.94,
+          "rss_bytes": 73936896
+        }
+      }
+    },
+    {
+      "at_ns": 100557904208932,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.57,
+          "rss_bytes": 38572032
+        },
+        "proxy": {
+          "cpu_seconds": 0.96,
+          "rss_bytes": 73945088
+        }
+      }
+    },
+    {
+      "at_ns": 100557988609499,
+      "processes": {
+        "api": {
+          "cpu_seconds": 0.57,
+          "rss_bytes": 38617088
+        },
+        "proxy": {
+          "cpu_seconds": 0.97,
+          "rss_bytes": 73961472
+        }
+      }
+    }
+  ]
+}

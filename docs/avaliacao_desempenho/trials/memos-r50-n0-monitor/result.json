@@ -1,0 +1,184 @@
+{
+  "app": "memos",
+  "mode": "monitor",
+  "target_rps": 50,
+  "duration_seconds": 3,
+  "workers": 16,
+  "summary": {
+    "requests": 150,
+    "successes": 149,
+    "http_statuses": {
+      "200": 149,
+      "429": 1
+    },
+    "transport_errors": 0,
+    "invalid_bodies": 0,
+    "elapsed_seconds": 3,
+    "completed_rps": 50.0,
+    "successful_rps": 49.666666666666664,
+    "success_fraction": 0.9933333333333333,
+    "latency_ms": {
+      "count": 150,
+      "mean": 6.45123178,
+      "p50": 6.0673395,
+      "p95": 9.668003,
+      "p99": 10.699885,
+      "min": 3.378749,
+      "max": 12.818312
+    },
+    "successful_latency_ms": {
+      "count": 149,
+      "mean": 6.461784214765101,
+      "p50": 6.067824,
+      "p95": 9.668003,
+      "p99": 10.699885,
+      "min": 3.378749,
+      "max": 12.818312
+    },
+    "service_ms": {
+      "count": 150,
+      "mean": 6.266480626666667,
+      "p50": 5.9025435,
+      "p95": 9.526726,
+      "p99": 10.460466,
+      "min": 3.256943,
+      "max": 10.761554
+    },
+    "client_queue_ms": {
+      "count": 150,
+      "mean": 0.18475115333333333,
+      "p50": 0.1657835,
+      "p95": 0.25006,
+      "p99": 0.381492,
+      "min": 0.091407,
+      "max": 2.056758
+    }
+  },
+  "warmup": {
+    "requests": 10,
+    "successes": 10,
+    "http_statuses": {
+      "200": 10
+    },
+    "transport_errors": 0,
+    "invalid_bodies": 0,
+    "elapsed_seconds": 1,
+    "completed_rps": 10.0,
+    "successful_rps": 10.0,
+    "success_fraction": 1.0,
+    "latency_ms": {
+      "count": 10,
+      "mean": 5.6947217,
+      "p50": 5.65349,
+      "p95": 7.749679,
+      "p99": 7.749679,
+      "min": 3.948019,
+      "max": 7.749679
+    },
+    "successful_latency_ms": {
+      "count": 10,
+      "mean": 5.6947217,
+      "p50": 5.65349,
+      "p95": 7.749679,
+      "p99": 7.749679,
+      "min": 3.948019,
+      "max": 7.749679
+    },
+    "service_ms": {
+      "count": 10,
+      "mean": 5.4906401,
+      "p50": 5.402442000000001,
+      "p95": 7.512378,
+      "p99": 7.512378,
+      "min": 3.757369,
+      "max": 7.512378
+    },
+    "client_queue_ms": {
+      "count": 10,
+      "mean": 0.2040816,
+      "p50": 0.18897599999999998,
+      "p95": 0.262651,
+      "p99": 0.262651,
+      "min": 0.158415,
+      "max": 0.262651
+    }
+  },
+  "resources": {
+    "api": {
+      "cpu_seconds": 0.31000000000000005,
+      "cpu_percent_one_core": 10.32769604995117,
+      "rss_start_bytes": 33017856,
+      "rss_end_bytes": 38723584,
+      "sampled_peak_rss_bytes": 38723584,
+      "samples": 31
+    },
+    "proxy": {
+      "cpu_seconds": 0.6499999999999999,
+      "cpu_percent_one_core": 21.654846556349217,
+      "rss_start_bytes": 77058048,
+      "rss_end_bytes": 77537280,
+      "sampled_peak_rss_bytes": 77537280,
+      "samples": 31
+    }
+  },
+  "internal": {
+    "observed": 150,
+    "expected_http_responses": 150,
+    "complete": true,
+    "classifications": {
+      "fired": 149,
+      "outside_model": 1
+    },
+    "replay_ms": {
+      "count": 150,
+      "mean": 0.7335684,
+      "p50": 0.6806415,
+      "p95": 1.204928,
+      "p99": 1.573369,
+      "min": 0.093158,
+      "max": 1.613677
+    },
+    "fired_replay_ms": {
+      "count": 149,
+      "mean": 0.7378664563758389,
+      "p50": 0.684458,
+      "p95": 1.204928,
+      "p99": 1.573369,
+      "min": 0.371083,
+      "max": 1.613677
+    },
+    "monitor_ms": {
+      "count": 150,
+      "mean": 0.8488085266666666,
+      "p50": 0.785142,
+      "p95": 1.38663,
+      "p99": 1.774171,
+      "min": 0.186817,
+      "max": 1.78066
+    }
+  },
+  "final_state": {
+    "sessions": 1,
+    "tokens": 2,
+    "counts": {
+      "events": 162,
+      "fired": 160,
+      "divergent": 0,
+      "outside_model": 2,
+      "not_processed": 0,
+      "capture_error": 0,
+      "transport_error": 0,
+      "expired_sessions": 0
+    }
+  },
+  "application": {
+    "host_pid": 1737681,
+    "image_id": "sha256:2414035b086e3c42b99654c8b26e6f5b1b1598080d65fd03c7f499552ff4dc94",
+    "image_reference": "golang@sha256:2414035b086e3c42b99654c8b26e6f5b1b1598080d65fd03c7f499552ff4dc94",
+    "memos_commit": "ee5f617ea815ea079a41dde2f53193250a22c36a",
+    "app_version": "0.16.0",
+    "mode": "dev"
+  },
+  "repetition": 0,
+  "order_index": 2
+}

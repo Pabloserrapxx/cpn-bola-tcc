@@ -1,0 +1,293 @@
+{
+  "summary": {
+    "api": {
+      "cpu_seconds": 0.9100000000000001,
+      "cpu_percent_one_core": 30.322271414961325,
+      "rss_start_bytes": 227352576,
+      "rss_end_bytes": 232583168,
+      "sampled_peak_rss_bytes": 232583168,
+      "samples": 31
+    }
+  },
+  "samples": [
+    {
+      "at_ns": 100230980406647,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.61,
+          "rss_bytes": 227352576
+        }
+      }
+    },
+    {
+      "at_ns": 100231080941745,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.64,
+          "rss_bytes": 227368960
+        }
+      }
+    },
+    {
+      "at_ns": 100231181677304,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.67,
+          "rss_bytes": 227774464
+        }
+      }
+    },
+    {
+      "at_ns": 100231281940975,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.69,
+          "rss_bytes": 227844096
+        }
+      }
+    },
+    {
+      "at_ns": 100231382340126,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.71,
+          "rss_bytes": 227934208
+        }
+      }
+    },
+    {
+      "at_ns": 100231482716740,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.76,
+          "rss_bytes": 228454400
+        }
+      }
+    },
+    {
+      "at_ns": 100231583206537,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.8,
+          "rss_bytes": 228499456
+        }
+      }
+    },
+    {
+      "at_ns": 100231683638310,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.82,
+          "rss_bytes": 228888576
+        }
+      }
+    },
+    {
+      "at_ns": 100231784038238,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.85,
+          "rss_bytes": 228913152
+        }
+      }
+    },
+    {
+      "at_ns": 100231884352362,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.88,
+          "rss_bytes": 228933632
+        }
+      }
+    },
+    {
+      "at_ns": 100231984736658,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.92,
+          "rss_bytes": 228990976
+        }
+      }
+    },
+    {
+      "at_ns": 100232085069816,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.95,
+          "rss_bytes": 229040128
+        }
+      }
+    },
+    {
+      "at_ns": 100232185474101,
+      "processes": {
+        "api": {
+          "cpu_seconds": 2.99,
+          "rss_bytes": 229433344
+        }
+      }
+    },
+    {
+      "at_ns": 100232285800411,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.01,
+          "rss_bytes": 229478400
+        }
+      }
+    },
+    {
+      "at_ns": 100232386293953,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.04,
+          "rss_bytes": 229486592
+        }
+      }
+    },
+    {
+      "at_ns": 100232486899934,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.06,
+          "rss_bytes": 229498880
+        }
+      }
+    },
+    {
+      "at_ns": 100232587550404,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.1,
+          "rss_bytes": 229580800
+        }
+      }
+    },
+    {
+      "at_ns": 100232687976702,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.14,
+          "rss_bytes": 229941248
+        }
+      }
+    },
+    {
+      "at_ns": 100232788428302,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.18,
+          "rss_bytes": 230957056
+        }
+      }
+    },
+    {
+      "at_ns": 100232888769036,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.19,
+          "rss_bytes": 230969344
+        }
+      }
+    },
+    {
+      "at_ns": 100232989241506,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.23,
+          "rss_bytes": 231026688
+        }
+      }
+    },
+    {
+      "at_ns": 100233089529758,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.26,
+          "rss_bytes": 231071744
+        }
+      }
+    },
+    {
+      "at_ns": 100233189778705,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.28,
+          "rss_bytes": 231432192
+        }
+      }
+    },
+    {
+      "at_ns": 100233290058264,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.29,
+          "rss_bytes": 231440384
+        }
+      }
+    },
+    {
+      "at_ns": 100233390697029,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.32,
+          "rss_bytes": 231444480
+        }
+      }
+    },
+    {
+      "at_ns": 100233493812721,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.35,
+          "rss_bytes": 231448576
+        }
+      }
+    },
+    {
+      "at_ns": 100233594276219,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.38,
+          "rss_bytes": 231886848
+        }
+      }
+    },
+    {
+      "at_ns": 100233694567366,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.39,
+          "rss_bytes": 231899136
+        }
+      }
+    },
+    {
+      "at_ns": 100233795132909,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.43,
+          "rss_bytes": 231903232
+        }
+      }
+    },
+    {
+      "at_ns": 100233895578908,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.51,
+          "rss_bytes": 232550400
+        }
+      }
+    },
+    {
+      "at_ns": 100233981501082,
+      "processes": {
+        "api": {
+          "cpu_seconds": 3.52,
+          "rss_bytes": 232583168
+        }
+      }
+    }
+  ]
+}

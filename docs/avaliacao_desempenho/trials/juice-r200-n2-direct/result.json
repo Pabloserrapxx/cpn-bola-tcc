@@ -1,0 +1,127 @@
+{
+  "app": "juice",
+  "mode": "direct",
+  "target_rps": 200,
+  "duration_seconds": 3,
+  "workers": 16,
+  "summary": {
+    "requests": 600,
+    "successes": 600,
+    "http_statuses": {
+      "200": 600
+    },
+    "transport_errors": 0,
+    "invalid_bodies": 0,
+    "elapsed_seconds": 6.149898209,
+    "completed_rps": 97.56259040546992,
+    "successful_rps": 97.56259040546992,
+    "success_fraction": 1.0,
+    "latency_ms": {
+      "count": 600,
+      "mean": 1904.8678745966668,
+      "p50": 2064.5500245,
+      "p95": 3113.22331,
+      "p99": 3198.456198,
+      "min": 144.077723,
+      "max": 3211.905121
+    },
+    "successful_latency_ms": {
+      "count": 600,
+      "mean": 1904.8678745966668,
+      "p50": 2064.5500245,
+      "p95": 3113.22331,
+      "p99": 3198.456198,
+      "min": 144.077723,
+      "max": 3211.905121
+    },
+    "service_ms": {
+      "count": 600,
+      "mean": 162.080705335,
+      "p50": 162.677572,
+      "p95": 255.904901,
+      "p99": 267.991565,
+      "min": 71.520784,
+      "max": 310.31318
+    },
+    "client_queue_ms": {
+      "count": 600,
+      "mean": 1742.7871692616666,
+      "p50": 1905.6235345,
+      "p95": 2979.534661,
+      "p99": 3071.987163,
+      "min": 0.219389,
+      "max": 3086.62503
+    }
+  },
+  "warmup": {
+    "requests": 10,
+    "successes": 10,
+    "http_statuses": {
+      "200": 10
+    },
+    "transport_errors": 0,
+    "invalid_bodies": 0,
+    "elapsed_seconds": 1,
+    "completed_rps": 10.0,
+    "successful_rps": 10.0,
+    "success_fraction": 1.0,
+    "latency_ms": {
+      "count": 10,
+      "mean": 19.663297200000002,
+      "p50": 19.04978,
+      "p95": 22.11016,
+      "p99": 22.11016,
+      "min": 16.775974,
+      "max": 22.11016
+    },
+    "successful_latency_ms": {
+      "count": 10,
+      "mean": 19.663297200000002,
+      "p50": 19.04978,
+      "p95": 22.11016,
+      "p99": 22.11016,
+      "min": 16.775974,
+      "max": 22.11016
+    },
+    "service_ms": {
+      "count": 10,
+      "mean": 19.4517637,
+      "p50": 18.8630115,
+      "p95": 21.920888,
+      "p99": 21.920888,
+      "min": 16.568903,
+      "max": 21.920888
+    },
+    "client_queue_ms": {
+      "count": 10,
+      "mean": 0.2115335,
+      "p50": 0.2097235,
+      "p95": 0.275051,
+      "p99": 0.275051,
+      "min": 0.131057,
+      "max": 0.275051
+    }
+  },
+  "resources": {
+    "api": {
+      "cpu_seconds": 8.03,
+      "cpu_percent_one_core": 130.50103348733307,
+      "rss_start_bytes": 232341504,
+      "rss_end_bytes": 382984192,
+      "sampled_peak_rss_bytes": 382984192,
+      "samples": 63
+    }
+  },
+  "internal": null,
+  "final_state": null,
+  "application": {
+    "host_pid": 1731833,
+    "image_id": "sha256:b3449813580486f9f1087fba1c08f730df500a53abc394f61653cf716d467513",
+    "image_reference": "bkimminich/juice-shop@sha256:b3449813580486f9f1087fba1c08f730df500a53abc394f61653cf716d467513",
+    "memos_commit": null,
+    "app_version": "14.1.1",
+    "mode": "default"
+  },
+  "repetition": 2,
+  "order_index": 0
+}

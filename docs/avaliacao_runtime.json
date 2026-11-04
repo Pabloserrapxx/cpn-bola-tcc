@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "python": "3.12.3",
+  "mitmproxy": "12.3.0",
+  "calls": [
+    {
+      "name": "alice-login",
+      "status_code": 200,
+      "response_preserved": true
+    },
+    {
+      "name": "alice-own",
+      "status_code": 200,
+      "response_preserved": true
+    },
+    {
+      "name": "bob-login",
+      "status_code": 200,
+      "response_preserved": true
+    },
+    {
+      "name": "bob-own",
+      "status_code": 200,
+      "response_preserved": true
+    },
+    {
+      "name": "alice-bola",
+      "status_code": 200,
+      "response_preserved": true
+    },
+    {
+      "name": "alice-after-alert",
+      "status_code": 200,
+      "response_preserved": true
+    },
+    {
+      "name": "outside-model",
+      "status_code": 200,
+      "response_preserved": true
+    }
+  ],
+  "expected_statuses": [
+    "fired",
+    "fired",
+    "fired",
+    "fired",
+    "divergent",
+    "fired",
+    "outside_model"
+  ],
+  "actual_statuses": [
+    "fired",
+    "fired",
+    "fired",
+    "fired",
+    "divergent",
+    "fired",
+    "outside_model"
+  ],
+  "counts": {
+    "events": 7,
+    "fired": 5,
+    "divergent": 1,
+    "outside_model": 1,
+    "not_processed": 0,
+    "capture_error": 0,
+    "transport_error": 0,
+    "expired_sessions": 0
+  },
+  "comparisons": [
+    {
+      "trace_id": "auth:88fb556d06a304aa8c275d1b:1",
+      "event_index": 0,
+      "equivalent": true
+    },
+    {
+      "trace_id": "auth:88fb556d06a304aa8c275d1b:1",
+      "event_index": 1,
+      "equivalent": true
+    },
+    {
+      "trace_id": "auth:88fb556d06a304aa8c275d1b:1",
+      "event_index": 2,
+      "equivalent": true
+    },
+    {
+      "trace_id": "auth:88fb556d06a304aa8c275d1b:1",
+      "event_index": 3,
+      "equivalent": true
+    },
+    {
+      "trace_id": "auth:88fb556d06a304aa8c275d1b:1",
+      "event_index": 4,
+      "equivalent": true
+    },
+    {
+      "trace_id": "auth:88fb556d06a304aa8c275d1b:1",
+      "final_equivalent": true,
+      "equivalent": true
+    },
+    {
+      "trace_id": "auth:a19cc9c1f86cb69242789f30:2",
+      "event_index": 0,
+      "equivalent": true
+    },
+    {
+      "trace_id": "auth:a19cc9c1f86cb69242789f30:2",
+      "event_index": 1,
+      "equivalent": true
+    },
+    {
+      "trace_id": "auth:a19cc9c1f86cb69242789f30:2",
+      "final_equivalent": true,
+      "equivalent": true
+    }
+  ],
+  "source_sha256": {
+    "cpn_runtime.py": "2df4a0c264e6cd7db3578c683c36db6ee86361587810ca5abfde923aa6ab3249",
+    "runtime/mitmproxy_addon.py": "d0ba783f38d8c76a7caf5a566cea09c9323d98722f876b2ba67586dcb6e0728a",
+    "scripts/run_proxy.py": "2d1cf799fdf900f26f65b22c53935e288d30cb2f15dcfdd56e8e2d88f15dfdfa",
+    "scripts/demo_api.py": "08147b4beca8937f74151afcd46c3627b2ba3dd962ad7ec90a7dc5a368f874e9",
+    "scripts/check_runtime.py": "a57f09d34e7b4daf48122be51666e91b9e7474ba9f8e38718eff7d1e23d48938",
+    "cpn_incremental.py": "5547950dacc2a0319b80579ef2db1f29897ace53f38efa92058d93ee75d32aeb",
+    "examples/contas.openapi.json": "a9f73b036a5140774833506f7f9f8b179f3c1dc96406a0e8f0a33806218104f0"
+  },
+  "scope": "HTTP real em localhost, API de laboratório deliberadamente vulnerável. Não executa Juice Shop/Memos nem avalia carga. Preservação compara status, bytes do corpo e cabeçalho X-Demo-API. Captura bruta temporária descartada."
+}

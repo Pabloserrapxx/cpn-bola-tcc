@@ -1,0 +1,672 @@
+{
+  "reference_repository": "https://github.com/ailton07/openapi-links-to-CPNs",
+  "reference_commit": "d6092c3d85adaf96a0e83a90a3bd2d287cd51325",
+  "ours_profile": "strict",
+  "reference_python": "3.9.25",
+  "ours_python": "3.12.3",
+  "observer": "scripts/links2cpn_worker.py; substitui somente geração de PNG por captura de marcação.",
+  "source_sha256": {
+    "src/openapiLinks2CPNs/__init__.py": "565876769a9b3255446475872d688b3486155762ee567545a6186bc67d80462d",
+    "src/openapiLinks2CPNs/execute_replay.py": "a3ed2facfbdd718fa4bd287b244a95b22151bd173a9c3a2fdc0a334003eee35b",
+    "src/openapiLinks2CPNs/logs_tools/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/openapiLinks2CPNs/logs_tools/find_in_logs.py": "e9a5a7c930634dd7377df0753386172a12be633a3cdc7bdec79906ed00ca6ca1",
+    "src/openapiLinks2CPNs/openapi/__init__.py": "565876769a9b3255446475872d688b3486155762ee567545a6186bc67d80462d",
+    "src/openapiLinks2CPNs/openapi/openapi2cpn.py": "ec45be0da146840b44af2d43f37f1ee43430457a95f565b02332ad2f1a5a4e81",
+    "src/openapiLinks2CPNs/replay/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/openapiLinks2CPNs/replay/coloured_token.py": "7202fda425aada46e09980d14b87331bcacd19cdbe832e2de1bf8d8e93064455",
+    "src/openapiLinks2CPNs/replay/replay.py": "98946c643b104128e3db50fb05a33520ee504a4f141c234c91dcfb5345e92f82",
+    "src/openapiLinks2CPNs/run_examples.py": "884ada2ac6fc59d06bfd1ff5056f4e54438d8ee7db9a6d42b3e582280841e847",
+    "src/openapiLinks2CPNs/utils/constants.py": "2f8ef4bb75cad58075bde317a80a2ddfde35a6f5ab057394375940a0cbdfd7a4",
+    "src/openapiLinks2CPNs/utils/draw_utils.py": "1b783b72353085a3682f6968aaa05cbf83207956e71f7430e51930c35d0186ee",
+    "src/openapiLinks2CPNs/utils/infinite_transition.py": "1945ff6810d4125a243a4d37bd855ced5257110b6589990a388a9d5932767614",
+    "src/openapiLinks2CPNs/utils/log_utils.py": "6eb6a158dac56d48d029f34e122cc3e0ce7d0635dc195dc23451f787fe4160ff",
+    "src/openapiLinks2CPNs/utils/openapi_utils.py": "bb28770c577d8f47d3add5a1896d6262bd891f1d1ec5c3e515c435012e175da4",
+    "src/openapiLinks2CPNs/utils/string_utils.py": "d9dd9e686c3dd8cbdcd044445ad8dedc62661f010ecca3f5e101e37f1b39f487"
+  },
+  "ours_source_sha256": {
+    "cpn_analysis.py": "4778309099bfb1d2121b4dcc9357e988c1fc62525bca2971a098c27b413d3e3a",
+    "cpn_bola.py": "786ced6ff7ccf016ab941dd09797e0838df92b49997957514a9017c1d2ca7b8b",
+    "cpn_cli.py": "813c74bc3f066d5d0200be133c04c2b7536c7c659627a1c9c3a13a8c2b7508a7",
+    "cpn_export.py": "4e3a215f7c9ceed2b96e93fa7da4ab7311156374f75bafada3440bbcdc0f1346",
+    "cpn_logs.py": "7fc9080946e8e4b2bc32eeed5e1ead6ab5fe74a796e107ae21798de57841e6ea",
+    "cpn_openapi.py": "16addc62f3810a228d47b89ec955da6e232f17485bf2870ad2f9047ce0c90298",
+    "cpn_snakes.py": "be8e2a98de5d7aa8297d63f1633f5268ea9e61b72793f575178fe616b5032690",
+    "scripts/compare_links2cpn.py": "e623c0986ba04bb22201b28126d4928b33fa82abf4ee5196099082a3ac7ac252",
+    "scripts/links2cpn_worker.py": "0d19c6786b42a2855c6e566e3c8a545d601566b0ca62ace427b12c9331b42391",
+    "scripts/comparison_fixtures.py": "3e29b0955b0e7bb0f19fd8a476c36e8a2a9de33753f5d2798b677f8825937af7"
+  },
+  "reference_requirements_sha256": "460b21afec4ba5518513a1eb31ab7c2427d3a2093f04581e56ae48c6da2506d6",
+  "reference_requirements_check": [
+    {
+      "package": "appnope",
+      "required": "0.1.3",
+      "observed": "0.1.3",
+      "match": true
+    },
+    {
+      "package": "asttokens",
+      "required": "2.0.5",
+      "observed": "2.0.5",
+      "match": true
+    },
+    {
+      "package": "attrs",
+      "required": "21.4.0",
+      "observed": "21.4.0",
+      "match": true
+    },
+    {
+      "package": "backcall",
+      "required": "0.2.0",
+      "observed": "0.2.0",
+      "match": true
+    },
+    {
+      "package": "certifi",
+      "required": "2022.5.18.1",
+      "observed": "2022.5.18.1",
+      "match": true
+    },
+    {
+      "package": "chardet",
+      "required": "4.0.0",
+      "observed": "4.0.0",
+      "match": true
+    },
+    {
+      "package": "charset-normalizer",
+      "required": "2.0.12",
+      "observed": "2.0.12",
+      "match": true
+    },
+    {
+      "package": "coverage",
+      "required": "6.4.1",
+      "observed": "6.4.1",
+      "match": true
+    },
+    {
+      "package": "decorator",
+      "required": "5.1.1",
+      "observed": "5.1.1",
+      "match": true
+    },
+    {
+      "package": "executing",
+      "required": "0.8.3",
+      "observed": "0.8.3",
+      "match": true
+    },
+    {
+      "package": "idna",
+      "required": "3.3",
+      "observed": "3.3",
+      "match": true
+    },
+    {
+      "package": "importlib-resources",
+      "required": "5.7.1",
+      "observed": "5.7.1",
+      "match": true
+    },
+    {
+      "package": "iniconfig",
+      "required": "1.1.1",
+      "observed": "1.1.1",
+      "match": true
+    },
+    {
+      "package": "ipdb",
+      "required": "0.13.9",
+      "observed": "0.13.9",
+      "match": true
+    },
+    {
+      "package": "ipython",
+      "required": "8.4.0",
+      "observed": "8.4.0",
+      "match": true
+    },
+    {
+      "package": "jedi",
+      "required": "0.18.1",
+      "observed": "0.18.1",
+      "match": true
+    },
+    {
+      "package": "jsonschema",
+      "required": "4.6.0",
+      "observed": "4.6.0",
+      "match": true
+    },
+    {
+      "package": "matplotlib-inline",
+      "required": "0.1.3",
+      "observed": "0.1.3",
+      "match": true
+    },
+    {
+      "package": "nets",
+      "required": "0.0.3.1",
+      "observed": "0.0.3.1",
+      "match": true
+    },
+    {
+      "package": "numpy",
+      "required": "1.22.4",
+      "observed": "1.22.4",
+      "match": true
+    },
+    {
+      "package": "openapi-schema-validator",
+      "required": "0.2.3",
+      "observed": "0.2.3",
+      "match": true
+    },
+    {
+      "package": "openapi-spec-validator",
+      "required": "0.4.0",
+      "observed": "0.4.0",
+      "match": true
+    },
+    {
+      "package": "packaging",
+      "required": "21.3",
+      "observed": "21.3",
+      "match": true
+    },
+    {
+      "package": "parso",
+      "required": "0.8.3",
+      "observed": "0.8.3",
+      "match": true
+    },
+    {
+      "package": "pexpect",
+      "required": "4.8.0",
+      "observed": "4.8.0",
+      "match": true
+    },
+    {
+      "package": "pickleshare",
+      "required": "0.7.5",
+      "observed": "0.7.5",
+      "match": true
+    },
+    {
+      "package": "pluggy",
+      "required": "1.0.0",
+      "observed": "1.0.0",
+      "match": true
+    },
+    {
+      "package": "prance",
+      "required": "0.22.11.4.0",
+      "observed": "0.22.11.4.0",
+      "match": true
+    },
+    {
+      "package": "prompt-toolkit",
+      "required": "3.0.29",
+      "observed": "3.0.29",
+      "match": true
+    },
+    {
+      "package": "ptyprocess",
+      "required": "0.7.0",
+      "observed": "0.7.0",
+      "match": true
+    },
+    {
+      "package": "pure-eval",
+      "required": "0.2.2",
+      "observed": "0.2.2",
+      "match": true
+    },
+    {
+      "package": "py",
+      "required": "1.11.0",
+      "observed": "1.11.0",
+      "match": true
+    },
+    {
+      "package": "Pygments",
+      "required": "2.12.0",
+      "observed": "2.12.0",
+      "match": true
+    },
+    {
+      "package": "pyparsing",
+      "required": "3.0.9",
+      "observed": "3.0.9",
+      "match": true
+    },
+    {
+      "package": "pyrsistent",
+      "required": "0.18.1",
+      "observed": "0.18.1",
+      "match": true
+    },
+    {
+      "package": "pytest",
+      "required": "7.1.2",
+      "observed": "7.1.2",
+      "match": true
+    },
+    {
+      "package": "pytest-cov",
+      "required": "3.0.0",
+      "observed": "3.0.0",
+      "match": true
+    },
+    {
+      "package": "PyYAML",
+      "required": "6.0",
+      "observed": "6.0",
+      "match": true
+    },
+    {
+      "package": "requests",
+      "required": "2.27.1",
+      "observed": "2.27.1",
+      "match": true
+    },
+    {
+      "package": "ruamel.yaml",
+      "required": "0.17.21",
+      "observed": "0.17.21",
+      "match": true
+    },
+    {
+      "package": "ruamel.yaml.clib",
+      "required": "0.2.7",
+      "observed": "0.2.7",
+      "match": true
+    },
+    {
+      "package": "semver",
+      "required": "2.13.0",
+      "observed": "2.13.0",
+      "match": true
+    },
+    {
+      "package": "six",
+      "required": "1.16.0",
+      "observed": "1.16.0",
+      "match": true
+    },
+    {
+      "package": "SNAKES",
+      "required": "0.9.32",
+      "observed": "0.9.32",
+      "match": true
+    },
+    {
+      "package": "stack-data",
+      "required": "0.2.0",
+      "observed": "0.2.0",
+      "match": true
+    },
+    {
+      "package": "toml",
+      "required": "0.10.2",
+      "observed": "0.10.2",
+      "match": true
+    },
+    {
+      "package": "tomli",
+      "required": "2.0.1",
+      "observed": "2.0.1",
+      "match": true
+    },
+    {
+      "package": "traitlets",
+      "required": "5.2.2.post1",
+      "observed": "5.2.2.post1",
+      "match": true
+    },
+    {
+      "package": "urllib3",
+      "required": "1.26.9",
+      "observed": "1.26.9",
+      "match": true
+    },
+    {
+      "package": "wcwidth",
+      "required": "0.2.5",
+      "observed": "0.2.5",
+      "match": true
+    },
+    {
+      "package": "zipp",
+      "required": "3.8.0",
+      "observed": "3.8.0",
+      "match": true
+    }
+  ],
+  "ours_dependencies": {
+    "referencing": "0.37.0",
+    "attrs": "26.1.0",
+    "jsonschema": "4.26.0",
+    "jsonschema-specifications": "2025.9.1",
+    "SNAKES": "0.9.33",
+    "rpds-py": "2026.6.3",
+    "pip": "26.2.1",
+    "typing_extensions": "4.16.0",
+    "PyYAML": "6.0.3"
+  },
+  "projection": "Comparação de recursos escalares por usuário: omite p_user auxiliar, alinha nomes de lugares e converte IDs para string; preserva multiplicidades e aninhamento de MultiSet. Não é equivalência de tipos nem equivalência formal.",
+  "scope": "Oito pares originais e treze controles. Resultados descritivos, não acurácia BOLA.",
+  "cases": [
+    {
+      "name": "original-contas",
+      "dataset": "original",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [],
+      "ours_failed_records": [
+        2
+      ],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "original-view-legitimo",
+      "dataset": "original",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [],
+      "ours_failed_records": [
+        2
+      ],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "original-view-multiusuario",
+      "dataset": "original",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [],
+      "ours_failed_records": [
+        3,
+        4
+      ],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "original-view-ataque",
+      "dataset": "original",
+      "reference_completed": true,
+      "ours_completed": false,
+      "reference_failed_records": [
+        29
+      ],
+      "ours_failed_records": [],
+      "first_failure_agreement": null,
+      "same_event_outcomes": null,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "original-manipulate",
+      "dataset": "original",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [
+        21
+      ],
+      "ours_failed_records": [
+        11
+      ],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "original-experimento",
+      "dataset": "original",
+      "reference_completed": true,
+      "ours_completed": false,
+      "reference_failed_records": [
+        47,
+        49,
+        54,
+        55,
+        96,
+        97,
+        105,
+        119,
+        133
+      ],
+      "ours_failed_records": [],
+      "first_failure_agreement": null,
+      "same_event_outcomes": null,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "original-memos-legitimo",
+      "dataset": "original",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [],
+      "ours_failed_records": [
+        9
+      ],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "original-memos-ataque",
+      "dataset": "original",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [
+        11
+      ],
+      "ours_failed_records": [
+        9
+      ],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "normal",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [],
+      "ours_failed_records": [],
+      "first_failure_agreement": true,
+      "same_event_outcomes": true,
+      "comparable_marking_count": 3,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "sem-produtor",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [
+        1
+      ],
+      "ours_failed_records": [
+        1
+      ],
+      "first_failure_agreement": true,
+      "same_event_outcomes": true,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "id-alheio",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [
+        2
+      ],
+      "ours_failed_records": [
+        2
+      ],
+      "first_failure_agreement": true,
+      "same_event_outcomes": true,
+      "comparable_marking_count": 1,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "apos-erro",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [
+        2
+      ],
+      "ours_failed_records": [
+        2
+      ],
+      "first_failure_agreement": true,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 1,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "usuarios",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [],
+      "ours_failed_records": [],
+      "first_failure_agreement": true,
+      "same_event_outcomes": true,
+      "comparable_marking_count": 4,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "multiplicidade",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [],
+      "ours_failed_records": [],
+      "first_failure_agreement": true,
+      "same_event_outcomes": true,
+      "comparable_marking_count": 3,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "pos-condicao",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [],
+      "ours_failed_records": [
+        2
+      ],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 1,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "json-pointer",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [
+        1,
+        2
+      ],
+      "ours_failed_records": [],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "guarda",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [],
+      "ours_failed_records": [
+        2
+      ],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 1,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "lista-dois",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [],
+      "ours_failed_records": [],
+      "first_failure_agreement": true,
+      "same_event_outcomes": true,
+      "comparable_marking_count": 2,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "lista-um",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [
+        2
+      ],
+      "ours_failed_records": [],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 1,
+      "resource_marking_mismatch_records": [
+        1
+      ]
+    },
+    {
+      "name": "lista-vazia",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [
+        1
+      ],
+      "ours_failed_records": [],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 0,
+      "resource_marking_mismatch_records": []
+    },
+    {
+      "name": "lista-dois-destinos",
+      "dataset": "controlled",
+      "reference_completed": true,
+      "ours_completed": true,
+      "reference_failed_records": [
+        2
+      ],
+      "ours_failed_records": [],
+      "first_failure_agreement": false,
+      "same_event_outcomes": false,
+      "comparable_marking_count": 1,
+      "resource_marking_mismatch_records": [
+        1
+      ]
+    }
+  ]
+}

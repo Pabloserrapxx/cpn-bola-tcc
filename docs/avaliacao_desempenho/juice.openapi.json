@@ -1,0 +1,99 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Juice Shop — View Basket",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/rest/user/login": {
+      "post": {
+        "operationId": "login",
+        "responses": {
+          "200": {
+            "description": "Resposta modelada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "authentication": {
+                      "type": "object",
+                      "properties": {
+                        "bid": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "bid"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "authentication"
+                  ]
+                }
+              }
+            },
+            "links": {
+              "basket": {
+                "operationId": "basket",
+                "parameters": {
+                  "id": "$response.body#/authentication/bid"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rest/basket/{id}": {
+      "get": {
+        "operationId": "basket",
+        "responses": {
+          "200": {
+            "description": "Resposta modelada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "id"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            },
+            "x-cpn-equals": {
+              "/data/id": "$request.path.id"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}

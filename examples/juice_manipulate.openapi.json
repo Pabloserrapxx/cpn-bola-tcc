@@ -1,0 +1,116 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Juice Shop — Manipulate Basket",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/rest/user/login": {
+      "post": {
+        "operationId": "login",
+        "responses": {
+          "200": {
+            "description": "Resposta modelada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "authentication": {
+                      "type": "object",
+                      "properties": {
+                        "bid": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "bid"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "authentication"
+                  ]
+                }
+              }
+            },
+            "links": {
+              "basket": {
+                "operationId": "basket",
+                "requestBody": {
+                  "BasketId": "$response.body#/authentication/bid"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BasketItems": {
+      "post": {
+        "operationId": "basket",
+        "responses": {
+          "200": {
+            "description": "Resposta modelada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "BasketId": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "BasketId"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            },
+            "x-cpn-equals": {
+              "/data/BasketId": "$request.body#/BasketId"
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "BasketId": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "ProductId": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "quantity": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "BasketId",
+                  "ProductId",
+                  "quantity"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

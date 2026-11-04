@@ -1,0 +1,27 @@
+[
+  {
+    "method": "POST",
+    "uri": "/login",
+    "statusCode": 200,
+    "ip": "alice",
+    "message": "POST /login 200",
+    "requestBody": {},
+    "responseBody": {
+      "authentication": {
+        "id": "6"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "uri": "/items",
+    "statusCode": 200,
+    "ip": "alice",
+    "message": "POST /items 200",
+    "requestBody": {
+      "BasketId": "6",
+      "quantity": 0
+    },
+    "responseBody": {}
+  }
+]

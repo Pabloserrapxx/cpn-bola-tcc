@@ -1,0 +1,26 @@
+[
+  {
+    "method": "POST",
+    "uri": "/login",
+    "statusCode": 200,
+    "ip": "alice",
+    "message": "POST /login 200",
+    "requestBody": {},
+    "responseBody": {
+      "authentication": {
+        "id": "6"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "uri": "/accounts/9",
+    "statusCode": 200,
+    "ip": "alice",
+    "message": "GET /accounts/9 200",
+    "requestBody": {},
+    "responseBody": {
+      "id": "9"
+    }
+  }
+]

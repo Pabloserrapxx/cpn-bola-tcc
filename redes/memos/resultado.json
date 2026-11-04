@@ -1,0 +1,485 @@
+{
+  "summary": {
+    "results": [
+      {
+        "trace_id": "legitimo",
+        "accepted": true,
+        "divergences": [],
+        "final_marking": {
+          "p_user": [
+            {
+              "color": "USER",
+              "value": "alice"
+            }
+          ],
+          "p:[\"patchMemo\", \"path\", \"memoId\"]": [
+            {
+              "color": "RESOURCE",
+              "value": [
+                "alice",
+                [
+                  "int",
+                  6
+                ]
+              ]
+            },
+            {
+              "color": "RESOURCE",
+              "value": [
+                "alice",
+                [
+                  "int",
+                  7
+                ]
+              ]
+            },
+            {
+              "color": "RESOURCE",
+              "value": [
+                "alice",
+                [
+                  "int",
+                  4
+                ]
+              ]
+            }
+          ]
+        },
+        "evaluated_events": 4,
+        "skipped_events": 0,
+        "unprocessed_events": 0,
+        "steps": [
+          {
+            "event_index": 0,
+            "activity": "get-/api/v1/memo-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"patchMemo\", \"path\", \"memoId\"]": [
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      4
+                    ]
+                  ]
+                },
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      6
+                    ]
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "event_index": 1,
+            "activity": "post-/api/v1/memo-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"patchMemo\", \"path\", \"memoId\"]": [
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      4
+                    ]
+                  ]
+                },
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      6
+                    ]
+                  ]
+                },
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      7
+                    ]
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "event_index": 2,
+            "activity": "patch-/api/v1/memo/{memoId}-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"patchMemo\", \"path\", \"memoId\"]": [
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      4
+                    ]
+                  ]
+                },
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      6
+                    ]
+                  ]
+                },
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      7
+                    ]
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "event_index": 3,
+            "activity": "patch-/api/v1/memo/{memoId}-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"patchMemo\", \"path\", \"memoId\"]": [
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      6
+                    ]
+                  ]
+                },
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      7
+                    ]
+                  ]
+                },
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      4
+                    ]
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "backend": "snakes"
+      },
+      {
+        "trace_id": "bola-id-alheio",
+        "accepted": false,
+        "divergences": [
+          {
+            "kind": "DIVERGENCIA_FLUXO_DADOS",
+            "trace_id": "bola-id-alheio",
+            "event_index": 1,
+            "activity": "patch-/api/v1/memo/{memoId}-200",
+            "message": "p:[\"patchMemo\", \"path\", \"memoId\"]: observado=RESOURCE:('alice', ('int', 6)); recursos permitidos para alice=[\"RESOURCE:('alice', ('int', 1))\", \"RESOURCE:('alice', ('int', 3))\"]."
+          }
+        ],
+        "final_marking": {
+          "p_user": [
+            {
+              "color": "USER",
+              "value": "alice"
+            }
+          ],
+          "p:[\"patchMemo\", \"path\", \"memoId\"]": [
+            {
+              "color": "RESOURCE",
+              "value": [
+                "alice",
+                [
+                  "int",
+                  1
+                ]
+              ]
+            },
+            {
+              "color": "RESOURCE",
+              "value": [
+                "alice",
+                [
+                  "int",
+                  3
+                ]
+              ]
+            }
+          ]
+        },
+        "evaluated_events": 2,
+        "skipped_events": 0,
+        "unprocessed_events": 0,
+        "steps": [
+          {
+            "event_index": 0,
+            "activity": "get-/api/v1/memo-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"patchMemo\", \"path\", \"memoId\"]": [
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      1
+                    ]
+                  ]
+                },
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      3
+                    ]
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "backend": "snakes"
+      },
+      {
+        "trace_id": "fora-de-ordem",
+        "accepted": false,
+        "divergences": [
+          {
+            "kind": "DIVERGENCIA_FLUXO_CONTROLE",
+            "trace_id": "fora-de-ordem",
+            "event_index": 0,
+            "activity": "patch-/api/v1/memo/{memoId}-200",
+            "message": "p:[\"patchMemo\", \"path\", \"memoId\"]: faltam recursos prévios do usuário alice (necessários=1, disponíveis=0)."
+          }
+        ],
+        "final_marking": {
+          "p_user": [
+            {
+              "color": "USER",
+              "value": "alice"
+            }
+          ],
+          "p:[\"patchMemo\", \"path\", \"memoId\"]": []
+        },
+        "evaluated_events": 1,
+        "skipped_events": 0,
+        "unprocessed_events": 0,
+        "steps": [],
+        "backend": "snakes"
+      },
+      {
+        "trace_id": "regra-estado",
+        "accepted": false,
+        "divergences": [
+          {
+            "kind": "VIOLACAO_REGRA",
+            "trace_id": "regra-estado",
+            "event_index": 1,
+            "activity": "patch-/api/v1/memo/{memoId}-200",
+            "message": "A guarda/regra da transição foi violada."
+          }
+        ],
+        "final_marking": {
+          "p_user": [
+            {
+              "color": "USER",
+              "value": "alice"
+            }
+          ],
+          "p:[\"patchMemo\", \"path\", \"memoId\"]": [
+            {
+              "color": "RESOURCE",
+              "value": [
+                "alice",
+                [
+                  "int",
+                  4
+                ]
+              ]
+            },
+            {
+              "color": "RESOURCE",
+              "value": [
+                "alice",
+                [
+                  "int",
+                  6
+                ]
+              ]
+            }
+          ]
+        },
+        "evaluated_events": 2,
+        "skipped_events": 0,
+        "unprocessed_events": 0,
+        "steps": [
+          {
+            "event_index": 0,
+            "activity": "get-/api/v1/memo-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"patchMemo\", \"path\", \"memoId\"]": [
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      4
+                    ]
+                  ]
+                },
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      6
+                    ]
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "backend": "snakes"
+      },
+      {
+        "trace_id": "lista-vazia",
+        "accepted": true,
+        "divergences": [],
+        "final_marking": {
+          "p_user": [
+            {
+              "color": "USER",
+              "value": "alice"
+            }
+          ],
+          "p:[\"patchMemo\", \"path\", \"memoId\"]": []
+        },
+        "evaluated_events": 1,
+        "skipped_events": 0,
+        "unprocessed_events": 0,
+        "steps": [
+          {
+            "event_index": 0,
+            "activity": "get-/api/v1/memo-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"patchMemo\", \"path\", \"memoId\"]": []
+            }
+          }
+        ],
+        "backend": "snakes"
+      }
+    ],
+    "error_trace_ids": [
+      "bola-id-alheio",
+      "fora-de-ordem",
+      "regra-estado"
+    ],
+    "fitness": 0.4
+  },
+  "total_events": 10,
+  "evaluated_events": 10,
+  "skipped_events": 0,
+  "unprocessed_events": 0,
+  "identity_field": "user_id",
+  "unknown_policy": "error",
+  "backend": "snakes",
+  "sources": {
+    "legitimo": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "bola-id-alheio": [
+      1,
+      2
+    ],
+    "fora-de-ordem": [
+      1
+    ],
+    "regra-estado": [
+      1,
+      2
+    ],
+    "lista-vazia": [
+      1
+    ]
+  },
+  "note": "Fitness = proporção de traces aceitos; não é acurácia de detecção. Divergência exige análise; atividade fora do modelo não comprova ataque."
+}

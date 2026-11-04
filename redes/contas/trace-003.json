@@ -1,0 +1,122 @@
+{
+  "name": "Contas — exemplo da tese",
+  "initial_places": [
+    "p_user"
+  ],
+  "places": [
+    "p_user",
+    "p:[\"getAccount\", \"path\", \"id\"]"
+  ],
+  "marking": {
+    "p_user": [
+      {
+        "color": "USER",
+        "value": "alice"
+      }
+    ],
+    "p:[\"getAccount\", \"path\", \"id\"]": [
+      {
+        "color": "RESOURCE",
+        "value": [
+          "alice",
+          [
+            "int",
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  "transitions": {
+    "post-/login-200": {
+      "operation": "login",
+      "method": "post",
+      "path": "/login",
+      "status": "200",
+      "guards": "schemas de requisição/parâmetros",
+      "checks": {}
+    },
+    "get-/accounts/{id}-200": {
+      "operation": "getAccount",
+      "method": "get",
+      "path": "/accounts/{id}",
+      "status": "200",
+      "guards": "schemas de requisição/parâmetros",
+      "checks": {
+        "/id": "$request.path.id"
+      }
+    }
+  },
+  "arcs": [
+    {
+      "source": "p_user",
+      "target": "post-/login-200",
+      "label": "USER"
+    },
+    {
+      "source": "post-/login-200",
+      "target": "p_user",
+      "label": "USER"
+    },
+    {
+      "source": "post-/login-200",
+      "target": "p:[\"getAccount\", \"path\", \"id\"]",
+      "label": "$response.body#/authentication/id"
+    },
+    {
+      "source": "p_user",
+      "target": "get-/accounts/{id}-200",
+      "label": "USER"
+    },
+    {
+      "source": "get-/accounts/{id}-200",
+      "target": "p_user",
+      "label": "USER"
+    },
+    {
+      "source": "p:[\"getAccount\", \"path\", \"id\"]",
+      "target": "get-/accounts/{id}-200",
+      "label": "path:id"
+    },
+    {
+      "source": "get-/accounts/{id}-200",
+      "target": "p:[\"getAccount\", \"path\", \"id\"]",
+      "label": "preserva recurso"
+    }
+  ],
+  "event_only_arcs": true,
+  "omitted_activities": [],
+  "fields": {
+    "p:[\"getAccount\", \"path\", \"id\"]": {
+      "operation": "getAccount",
+      "location": "path",
+      "name": "id",
+      "schema": {
+        "type": "integer",
+        "minimum": 1
+      }
+    }
+  },
+  "routes": [
+    {
+      "method": "post",
+      "path": "/login",
+      "parameters": []
+    },
+    {
+      "method": "get",
+      "path": "/accounts/{id}",
+      "parameters": [
+        {
+          "location": "path",
+          "name": "id",
+          "schema": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      ]
+    }
+  ],
+  "legacy_expressions": false
+}

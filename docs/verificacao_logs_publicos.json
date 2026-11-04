@@ -1,0 +1,39 @@
+{
+  "reference_commit": "d6092c3d85adaf96a0e83a90a3bd2d287cd51325",
+  "identity_field": "ip",
+  "unknown_policy": "skip",
+  "results": [
+    {
+      "source": "https://raw.githubusercontent.com/ailton07/openapi-links-to-CPNs/d6092c3d85adaf96a0e83a90a3bd2d287cd51325/logs/memos_login_create_archieve.json",
+      "sha256": "8e944dcf7d705c58be50ea3ce4b6fd132c7248eef5353d41e2734c6842083069",
+      "model": "examples/memos.openapi.json",
+      "accepted": true,
+      "expected_accepted": true,
+      "backend": "snakes",
+      "total_events": 16,
+      "evaluated_events": 4,
+      "skipped_events": 12,
+      "divergences": []
+    },
+    {
+      "source": "https://raw.githubusercontent.com/ailton07/openapi-links-to-CPNs/d6092c3d85adaf96a0e83a90a3bd2d287cd51325/logs/memos_login_and_attack_log.json",
+      "sha256": "7c83ed698ae07830d23e39891ffdc75a8b311d82c47af43447f79d8879a1ef10",
+      "model": "examples/memos.openapi.json",
+      "accepted": false,
+      "expected_accepted": false,
+      "backend": "snakes",
+      "total_events": 11,
+      "evaluated_events": 2,
+      "skipped_events": 9,
+      "divergences": [
+        {
+          "kind": "DIVERGENCIA_FLUXO_DADOS",
+          "event_index": 10,
+          "source_record": 11,
+          "activity": "patch-/api/v1/memo/{memoId}-200"
+        }
+      ]
+    }
+  ],
+  "scope": "Reexecução de dois logs de Memos em especificação reconstruída. Não é reprodução da matriz de confusão da tese nem comparação diferencial com SNAKES."
+}

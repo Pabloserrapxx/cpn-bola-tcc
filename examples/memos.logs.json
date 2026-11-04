@@ -1,0 +1,152 @@
+[
+  {
+    "trace_id": "legitimo",
+    "user_id": "alice",
+    "events": [
+      {
+        "method": "GET",
+        "uri": "/api/v1/memo?creatorUsername=alice",
+        "statusCode": 200,
+        "requestBody": {},
+        "responseBody": [
+          {
+            "id": 4
+          },
+          {
+            "id": 6
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "uri": "/api/v1/memo",
+        "statusCode": 200,
+        "requestBody": {
+          "content": "Nota sintética"
+        },
+        "responseBody": {
+          "id": 7
+        }
+      },
+      {
+        "method": "PATCH",
+        "uri": "/api/v1/memo/7",
+        "statusCode": 200,
+        "requestBody": {
+          "rowStatus": "ARCHIVED"
+        },
+        "responseBody": {
+          "id": 7,
+          "rowStatus": "ARCHIVED"
+        }
+      },
+      {
+        "method": "PATCH",
+        "uri": "/api/v1/memo/4",
+        "statusCode": 200,
+        "requestBody": {
+          "rowStatus": "ARCHIVED"
+        },
+        "responseBody": {
+          "id": 4,
+          "rowStatus": "ARCHIVED"
+        }
+      }
+    ]
+  },
+  {
+    "trace_id": "bola-id-alheio",
+    "user_id": "alice",
+    "events": [
+      {
+        "method": "GET",
+        "uri": "/api/v1/memo",
+        "statusCode": 200,
+        "requestBody": {},
+        "responseBody": [
+          {
+            "id": 1
+          },
+          {
+            "id": 3
+          }
+        ]
+      },
+      {
+        "method": "PATCH",
+        "uri": "/api/v1/memo/6",
+        "statusCode": 200,
+        "requestBody": {
+          "rowStatus": "ARCHIVED"
+        },
+        "responseBody": {
+          "id": 6,
+          "rowStatus": "ARCHIVED"
+        }
+      }
+    ]
+  },
+  {
+    "trace_id": "fora-de-ordem",
+    "user_id": "alice",
+    "events": [
+      {
+        "method": "PATCH",
+        "uri": "/api/v1/memo/6",
+        "statusCode": 200,
+        "requestBody": {
+          "rowStatus": "ARCHIVED"
+        },
+        "responseBody": {
+          "id": 6,
+          "rowStatus": "ARCHIVED"
+        }
+      }
+    ]
+  },
+  {
+    "trace_id": "regra-estado",
+    "user_id": "alice",
+    "events": [
+      {
+        "method": "GET",
+        "uri": "/api/v1/memo?creatorUsername=alice",
+        "statusCode": 200,
+        "requestBody": {},
+        "responseBody": [
+          {
+            "id": 4
+          },
+          {
+            "id": 6
+          }
+        ]
+      },
+      {
+        "method": "PATCH",
+        "uri": "/api/v1/memo/4",
+        "statusCode": 200,
+        "requestBody": {
+          "rowStatus": "INVALIDO"
+        },
+        "responseBody": {
+          "id": 4,
+          "rowStatus": "INVALIDO"
+        }
+      }
+    ]
+  },
+  {
+    "trace_id": "lista-vazia",
+    "user_id": "alice",
+    "events": [
+      {
+        "method": "GET",
+        "uri": "/api/v1/memo",
+        "statusCode": 200,
+        "requestBody": {},
+        "responseBody": []
+      }
+    ]
+  }
+]

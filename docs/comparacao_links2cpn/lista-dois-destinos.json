@@ -1,0 +1,195 @@
+{
+  "name": "lista-dois-destinos",
+  "dataset": "controlled",
+  "purpose": "Dois links de saída após expansão do array",
+  "inputs": {
+    "spec_sha256": "1d133408c9373fdc01153b75ac2200359b895d7b3883164423a2475be6a0cad5",
+    "logs_sha256": "e37e07f5cd15ac0c707f8acdefe2d2e287b49f5689b39f3eb34aeffd6b1c2f5c",
+    "specification": "lista-dois-destinos.openapi.json",
+    "log": "lista-dois-destinos.logs.json",
+    "same_files_for_both_engines": true
+  },
+  "reference": {
+    "engine": "Links2CPN",
+    "python": "3.9.25",
+    "intervention": "DrawUtils.draw replaced by read-only marking capture; original Replay called.",
+    "record_count": 2,
+    "places": [
+      "id patch-/memos/{id}",
+      "id patch-/other/{id}"
+    ],
+    "transitions": [
+      "get-/memos-200",
+      "patch-/memos/{id}-200",
+      "patch-/other/{id}-200"
+    ],
+    "completed": true,
+    "failed_records": [
+      2
+    ],
+    "skipped_records": [],
+    "successful_records": [
+      1
+    ],
+    "dependencies": {
+      "ruamel.yaml": "0.17.21",
+      "pluggy": "1.0.0",
+      "chardet": "4.0.0",
+      "traitlets": "5.2.2.post1",
+      "attrs": "21.4.0",
+      "Pygments": "2.12.0",
+      "parso": "0.8.3",
+      "tomli": "2.0.1",
+      "prance": "0.22.11.4.0",
+      "six": "1.16.0",
+      "semver": "2.13.0",
+      "wcwidth": "0.2.5",
+      "wheel": "0.38.4",
+      "pickleshare": "0.7.5",
+      "iniconfig": "1.1.1",
+      "urllib3": "1.26.9",
+      "backcall": "0.2.0",
+      "jedi": "0.18.1",
+      "prompt-toolkit": "3.0.29",
+      "openapi-spec-validator": "0.4.0",
+      "PyYAML": "6.0",
+      "jsonschema": "4.6.0",
+      "pytest-cov": "3.0.0",
+      "SNAKES": "0.9.32",
+      "zipp": "3.8.0",
+      "ruamel.yaml.clib": "0.2.7",
+      "packaging": "21.3",
+      "charset-normalizer": "2.0.12",
+      "toml": "0.10.2",
+      "pyparsing": "3.0.9",
+      "stack-data": "0.2.0",
+      "nets": "0.0.3.1",
+      "pip": "23.0.1",
+      "executing": "0.8.3",
+      "numpy": "1.22.4",
+      "pure-eval": "0.2.2",
+      "ipython": "8.4.0",
+      "py": "1.11.0",
+      "pyrsistent": "0.18.1",
+      "coverage": "6.4.1",
+      "importlib-resources": "5.7.1",
+      "pexpect": "4.8.0",
+      "requests": "2.27.1",
+      "setuptools": "65.5.1",
+      "idna": "3.3",
+      "pytest": "7.1.2",
+      "asttokens": "2.0.5",
+      "decorator": "5.1.1",
+      "ptyprocess": "0.7.0",
+      "openapi-schema-validator": "0.2.3",
+      "appnope": "0.1.3",
+      "ipdb": "0.13.9",
+      "matplotlib-inline": "0.1.3",
+      "certifi": "2022.5.18.1"
+    }
+  },
+  "ours": {
+    "engine": "TCC",
+    "python": "3.12.3",
+    "backend": "snakes",
+    "legacy_expressions": true,
+    "identity_field": "ip",
+    "unknown_policy": "skip",
+    "profile": "strict",
+    "failed_records": [],
+    "successful_records": [
+      1,
+      2
+    ],
+    "skipped_records": [],
+    "unprocessed_records": [],
+    "places": [
+      "p_user",
+      "p:[\"patchMemo\", \"path\", \"id\"]",
+      "p:[\"other\", \"path\", \"id\"]"
+    ],
+    "transitions": [
+      "get-/memos-200",
+      "patch-/memos/{id}-200",
+      "patch-/other/{id}-200"
+    ],
+    "divergences": [],
+    "record_count": 2,
+    "completed": true
+  },
+  "comparable_event_count": 2,
+  "matching_event_count": 1,
+  "same_event_outcomes": false,
+  "comparable_marking_count": 1,
+  "first_failure_agreement": false,
+  "resource_marking_mismatches": [
+    {
+      "record": 1,
+      "reference": [
+        {
+          "place": "id patch-/memos/{id}",
+          "resource": {
+            "id": "4"
+          },
+          "nesting": 0,
+          "count": 1
+        },
+        {
+          "place": "id patch-/memos/{id}",
+          "resource": {
+            "id": "6"
+          },
+          "nesting": 0,
+          "count": 1
+        }
+      ],
+      "ours": [
+        {
+          "place": "id patch-/memos/{id}",
+          "resource": {
+            "id": "4"
+          },
+          "nesting": 0,
+          "count": 1
+        },
+        {
+          "place": "id patch-/memos/{id}",
+          "resource": {
+            "id": "6"
+          },
+          "nesting": 0,
+          "count": 1
+        },
+        {
+          "place": "id patch-/other/{id}",
+          "resource": {
+            "id": "4"
+          },
+          "nesting": 0,
+          "count": 1
+        },
+        {
+          "place": "id patch-/other/{id}",
+          "resource": {
+            "id": "6"
+          },
+          "nesting": 0,
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "record": 1,
+      "reference": "fired",
+      "ours": "fired",
+      "resource_marking_equal": false
+    },
+    {
+      "record": 2,
+      "reference": "failed",
+      "ours": "fired"
+    }
+  ]
+}

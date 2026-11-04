@@ -1,0 +1,111 @@
+{
+  "name": "Juice Shop — View Basket",
+  "initial_places": [
+    "p_user"
+  ],
+  "places": [
+    "p_user",
+    "p:[\"basket\", \"path\", \"id\"]"
+  ],
+  "marking": {
+    "p_user": [
+      {
+        "color": "USER",
+        "value": "alice"
+      }
+    ],
+    "p:[\"basket\", \"path\", \"id\"]": []
+  },
+  "transitions": {
+    "post-/rest/user/login-200": {
+      "operation": "login",
+      "method": "post",
+      "path": "/rest/user/login",
+      "status": "200",
+      "guards": "schemas de requisição/parâmetros",
+      "checks": {}
+    },
+    "get-/rest/basket/{id}-200": {
+      "operation": "basket",
+      "method": "get",
+      "path": "/rest/basket/{id}",
+      "status": "200",
+      "guards": "schemas de requisição/parâmetros",
+      "checks": {
+        "/data/id": "$request.path.id"
+      }
+    }
+  },
+  "arcs": [
+    {
+      "source": "p_user",
+      "target": "post-/rest/user/login-200",
+      "label": "USER"
+    },
+    {
+      "source": "post-/rest/user/login-200",
+      "target": "p_user",
+      "label": "USER"
+    },
+    {
+      "source": "post-/rest/user/login-200",
+      "target": "p:[\"basket\", \"path\", \"id\"]",
+      "label": "$response.body#/authentication/bid"
+    },
+    {
+      "source": "p_user",
+      "target": "get-/rest/basket/{id}-200",
+      "label": "USER"
+    },
+    {
+      "source": "get-/rest/basket/{id}-200",
+      "target": "p_user",
+      "label": "USER"
+    },
+    {
+      "source": "p:[\"basket\", \"path\", \"id\"]",
+      "target": "get-/rest/basket/{id}-200",
+      "label": "path:id"
+    },
+    {
+      "source": "get-/rest/basket/{id}-200",
+      "target": "p:[\"basket\", \"path\", \"id\"]",
+      "label": "preserva recurso"
+    }
+  ],
+  "event_only_arcs": true,
+  "omitted_activities": [],
+  "fields": {
+    "p:[\"basket\", \"path\", \"id\"]": {
+      "operation": "basket",
+      "location": "path",
+      "name": "id",
+      "schema": {
+        "type": "integer",
+        "minimum": 1
+      }
+    }
+  },
+  "routes": [
+    {
+      "method": "post",
+      "path": "/rest/user/login",
+      "parameters": []
+    },
+    {
+      "method": "get",
+      "path": "/rest/basket/{id}",
+      "parameters": [
+        {
+          "location": "path",
+          "name": "id",
+          "schema": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      ]
+    }
+  ],
+  "legacy_expressions": false
+}

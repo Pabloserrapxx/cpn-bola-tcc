@@ -1,0 +1,182 @@
+{
+  "app": "juice",
+  "mode": "monitor",
+  "target_rps": 10,
+  "duration_seconds": 3,
+  "workers": 16,
+  "summary": {
+    "requests": 30,
+    "successes": 30,
+    "http_statuses": {
+      "200": 30
+    },
+    "transport_errors": 0,
+    "invalid_bodies": 0,
+    "elapsed_seconds": 3,
+    "completed_rps": 10.0,
+    "successful_rps": 10.0,
+    "success_fraction": 1.0,
+    "latency_ms": {
+      "count": 30,
+      "mean": 26.896288666666667,
+      "p50": 26.8891905,
+      "p95": 31.223636,
+      "p99": 31.668357,
+      "min": 19.674244,
+      "max": 31.668357
+    },
+    "successful_latency_ms": {
+      "count": 30,
+      "mean": 26.896288666666667,
+      "p50": 26.8891905,
+      "p95": 31.223636,
+      "p99": 31.668357,
+      "min": 19.674244,
+      "max": 31.668357
+    },
+    "service_ms": {
+      "count": 30,
+      "mean": 26.6565666,
+      "p50": 26.584317,
+      "p95": 31.00603,
+      "p99": 31.467224,
+      "min": 19.524309,
+      "max": 31.467224
+    },
+    "client_queue_ms": {
+      "count": 30,
+      "mean": 0.23972206666666668,
+      "p50": 0.232201,
+      "p95": 0.364098,
+      "p99": 0.380939,
+      "min": 0.143342,
+      "max": 0.380939
+    }
+  },
+  "warmup": {
+    "requests": 10,
+    "successes": 10,
+    "http_statuses": {
+      "200": 10
+    },
+    "transport_errors": 0,
+    "invalid_bodies": 0,
+    "elapsed_seconds": 1,
+    "completed_rps": 10.0,
+    "successful_rps": 10.0,
+    "success_fraction": 1.0,
+    "latency_ms": {
+      "count": 10,
+      "mean": 28.085716599999998,
+      "p50": 28.6342565,
+      "p95": 30.727151,
+      "p99": 30.727151,
+      "min": 22.345449,
+      "max": 30.727151
+    },
+    "successful_latency_ms": {
+      "count": 10,
+      "mean": 28.085716599999998,
+      "p50": 28.6342565,
+      "p95": 30.727151,
+      "p99": 30.727151,
+      "min": 22.345449,
+      "max": 30.727151
+    },
+    "service_ms": {
+      "count": 10,
+      "mean": 27.8966221,
+      "p50": 28.431009500000002,
+      "p95": 30.500886,
+      "p99": 30.500886,
+      "min": 22.226181,
+      "max": 30.500886
+    },
+    "client_queue_ms": {
+      "count": 10,
+      "mean": 0.1890945,
+      "p50": 0.191125,
+      "p95": 0.244412,
+      "p99": 0.244412,
+      "min": 0.119268,
+      "max": 0.244412
+    }
+  },
+  "resources": {
+    "api": {
+      "cpu_seconds": 0.8399999999999999,
+      "cpu_percent_one_core": 27.979562999716364,
+      "rss_start_bytes": 232812544,
+      "rss_end_bytes": 237711360,
+      "sampled_peak_rss_bytes": 237711360,
+      "samples": 31
+    },
+    "proxy": {
+      "cpu_seconds": 0.13,
+      "cpu_percent_one_core": 4.330170464241819,
+      "rss_start_bytes": 77070336,
+      "rss_end_bytes": 77225984,
+      "sampled_peak_rss_bytes": 77225984,
+      "samples": 31
+    }
+  },
+  "internal": {
+    "observed": 30,
+    "expected_http_responses": 30,
+    "complete": true,
+    "classifications": {
+      "fired": 30
+    },
+    "replay_ms": {
+      "count": 30,
+      "mean": 0.4266541,
+      "p50": 0.3748665,
+      "p95": 0.76141,
+      "p99": 0.931446,
+      "min": 0.349441,
+      "max": 0.931446
+    },
+    "fired_replay_ms": {
+      "count": 30,
+      "mean": 0.4266541,
+      "p50": 0.3748665,
+      "p95": 0.76141,
+      "p99": 0.931446,
+      "min": 0.349441,
+      "max": 0.931446
+    },
+    "monitor_ms": {
+      "count": 30,
+      "mean": 0.499151,
+      "p50": 0.44328,
+      "p95": 0.8599,
+      "p99": 1.006784,
+      "min": 0.410879,
+      "max": 1.006784
+    }
+  },
+  "final_state": {
+    "sessions": 1,
+    "tokens": 2,
+    "counts": {
+      "events": 41,
+      "fired": 41,
+      "divergent": 0,
+      "outside_model": 0,
+      "not_processed": 0,
+      "capture_error": 0,
+      "transport_error": 0,
+      "expired_sessions": 0
+    }
+  },
+  "application": {
+    "host_pid": 1708865,
+    "image_id": "sha256:b3449813580486f9f1087fba1c08f730df500a53abc394f61653cf716d467513",
+    "image_reference": "bkimminich/juice-shop@sha256:b3449813580486f9f1087fba1c08f730df500a53abc394f61653cf716d467513",
+    "memos_commit": null,
+    "app_version": "14.1.1",
+    "mode": "default"
+  },
+  "repetition": 0,
+  "order_index": 2
+}

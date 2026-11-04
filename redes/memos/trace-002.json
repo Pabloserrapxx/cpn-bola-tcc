@@ -1,0 +1,140 @@
+{
+  "name": "Memos — listar/criar/arquivar",
+  "initial_places": [
+    "p_user"
+  ],
+  "places": [
+    "p_user",
+    "p:[\"patchMemo\", \"path\", \"memoId\"]"
+  ],
+  "marking": {
+    "p_user": [
+      {
+        "color": "USER",
+        "value": "alice"
+      }
+    ],
+    "p:[\"patchMemo\", \"path\", \"memoId\"]": []
+  },
+  "transitions": {
+    "get-/api/v1/memo-200": {
+      "operation": "listMemos",
+      "method": "get",
+      "path": "/api/v1/memo",
+      "status": "200",
+      "guards": "schemas de requisição/parâmetros",
+      "checks": {}
+    },
+    "post-/api/v1/memo-200": {
+      "operation": "createMemo",
+      "method": "post",
+      "path": "/api/v1/memo",
+      "status": "200",
+      "guards": "schemas de requisição/parâmetros",
+      "checks": {}
+    },
+    "patch-/api/v1/memo/{memoId}-200": {
+      "operation": "patchMemo",
+      "method": "patch",
+      "path": "/api/v1/memo/{memoId}",
+      "status": "200",
+      "guards": "schemas de requisição/parâmetros",
+      "checks": {
+        "/id": "$request.path.memoId",
+        "/rowStatus": "$request.body#/rowStatus"
+      }
+    }
+  },
+  "arcs": [
+    {
+      "source": "p_user",
+      "target": "get-/api/v1/memo-200",
+      "label": "USER"
+    },
+    {
+      "source": "get-/api/v1/memo-200",
+      "target": "p_user",
+      "label": "USER"
+    },
+    {
+      "source": "get-/api/v1/memo-200",
+      "target": "p:[\"patchMemo\", \"path\", \"memoId\"]",
+      "label": "$response.body#/id [cada item]"
+    },
+    {
+      "source": "p_user",
+      "target": "post-/api/v1/memo-200",
+      "label": "USER"
+    },
+    {
+      "source": "post-/api/v1/memo-200",
+      "target": "p_user",
+      "label": "USER"
+    },
+    {
+      "source": "post-/api/v1/memo-200",
+      "target": "p:[\"patchMemo\", \"path\", \"memoId\"]",
+      "label": "$response.body#/id"
+    },
+    {
+      "source": "p_user",
+      "target": "patch-/api/v1/memo/{memoId}-200",
+      "label": "USER"
+    },
+    {
+      "source": "patch-/api/v1/memo/{memoId}-200",
+      "target": "p_user",
+      "label": "USER"
+    },
+    {
+      "source": "p:[\"patchMemo\", \"path\", \"memoId\"]",
+      "target": "patch-/api/v1/memo/{memoId}-200",
+      "label": "path:memoId"
+    },
+    {
+      "source": "patch-/api/v1/memo/{memoId}-200",
+      "target": "p:[\"patchMemo\", \"path\", \"memoId\"]",
+      "label": "preserva recurso"
+    }
+  ],
+  "event_only_arcs": true,
+  "omitted_activities": [],
+  "fields": {
+    "p:[\"patchMemo\", \"path\", \"memoId\"]": {
+      "operation": "patchMemo",
+      "location": "path",
+      "name": "memoId",
+      "schema": {
+        "type": "integer",
+        "minimum": 1
+      }
+    }
+  },
+  "routes": [
+    {
+      "method": "get",
+      "path": "/api/v1/memo",
+      "parameters": []
+    },
+    {
+      "method": "post",
+      "path": "/api/v1/memo",
+      "parameters": []
+    },
+    {
+      "method": "patch",
+      "path": "/api/v1/memo/{memoId}",
+      "parameters": [
+        {
+          "location": "path",
+          "name": "memoId",
+          "schema": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      ]
+    }
+  ],
+  "legacy_expressions": false
+}

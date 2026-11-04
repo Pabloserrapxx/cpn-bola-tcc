@@ -1,0 +1,22 @@
+.venv/
+.comparison/
+__pycache__/
+*.pyc
+
+.venv-runtime/
+
+.runtime-apps/
+
+# Configuração local e credenciais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Capturas brutas e bancos locais
+**/eventos_capturados.jsonl
+*.log
+*.db
+*.sqlite
+*.sqlite3

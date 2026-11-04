@@ -1,0 +1,226 @@
+{
+  "summary": {
+    "results": [
+      {
+        "trace_id": "legitimo",
+        "accepted": true,
+        "divergences": [],
+        "final_marking": {
+          "p_user": [
+            {
+              "color": "USER",
+              "value": "alice"
+            }
+          ],
+          "p:[\"basket\", \"path\", \"id\"]": [
+            {
+              "color": "RESOURCE",
+              "value": [
+                "alice",
+                [
+                  "int",
+                  6
+                ]
+              ]
+            }
+          ]
+        },
+        "evaluated_events": 3,
+        "skipped_events": 0,
+        "unprocessed_events": 0,
+        "steps": [
+          {
+            "event_index": 0,
+            "activity": "post-/rest/user/login-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"basket\", \"path\", \"id\"]": [
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      6
+                    ]
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "event_index": 1,
+            "activity": "get-/rest/basket/{id}-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"basket\", \"path\", \"id\"]": [
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      6
+                    ]
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "event_index": 2,
+            "activity": "get-/rest/basket/{id}-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"basket\", \"path\", \"id\"]": [
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      6
+                    ]
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "backend": "snakes"
+      },
+      {
+        "trace_id": "bola-id-alheio",
+        "accepted": false,
+        "divergences": [
+          {
+            "kind": "DIVERGENCIA_FLUXO_DADOS",
+            "trace_id": "bola-id-alheio",
+            "event_index": 1,
+            "activity": "get-/rest/basket/{id}-200",
+            "message": "p:[\"basket\", \"path\", \"id\"]: observado=RESOURCE:('alice', ('int', 9)); recursos permitidos para alice=[\"RESOURCE:('alice', ('int', 6))\"]."
+          }
+        ],
+        "final_marking": {
+          "p_user": [
+            {
+              "color": "USER",
+              "value": "alice"
+            }
+          ],
+          "p:[\"basket\", \"path\", \"id\"]": [
+            {
+              "color": "RESOURCE",
+              "value": [
+                "alice",
+                [
+                  "int",
+                  6
+                ]
+              ]
+            }
+          ]
+        },
+        "evaluated_events": 2,
+        "skipped_events": 0,
+        "unprocessed_events": 0,
+        "steps": [
+          {
+            "event_index": 0,
+            "activity": "post-/rest/user/login-200",
+            "marking": {
+              "p_user": [
+                {
+                  "color": "USER",
+                  "value": "alice"
+                }
+              ],
+              "p:[\"basket\", \"path\", \"id\"]": [
+                {
+                  "color": "RESOURCE",
+                  "value": [
+                    "alice",
+                    [
+                      "int",
+                      6
+                    ]
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "backend": "snakes"
+      },
+      {
+        "trace_id": "fora-de-ordem",
+        "accepted": false,
+        "divergences": [
+          {
+            "kind": "DIVERGENCIA_FLUXO_CONTROLE",
+            "trace_id": "fora-de-ordem",
+            "event_index": 0,
+            "activity": "get-/rest/basket/{id}-200",
+            "message": "p:[\"basket\", \"path\", \"id\"]: faltam recursos prévios do usuário alice (necessários=1, disponíveis=0)."
+          }
+        ],
+        "final_marking": {
+          "p_user": [
+            {
+              "color": "USER",
+              "value": "alice"
+            }
+          ],
+          "p:[\"basket\", \"path\", \"id\"]": []
+        },
+        "evaluated_events": 1,
+        "skipped_events": 0,
+        "unprocessed_events": 0,
+        "steps": [],
+        "backend": "snakes"
+      }
+    ],
+    "error_trace_ids": [
+      "bola-id-alheio",
+      "fora-de-ordem"
+    ],
+    "fitness": 0.33333333333333337
+  },
+  "total_events": 6,
+  "evaluated_events": 6,
+  "skipped_events": 0,
+  "unprocessed_events": 0,
+  "identity_field": "user_id",
+  "unknown_policy": "error",
+  "backend": "snakes",
+  "sources": {
+    "legitimo": [
+      1,
+      2,
+      3
+    ],
+    "bola-id-alheio": [
+      1,
+      2
+    ],
+    "fora-de-ordem": [
+      1
+    ]
+  },
+  "note": "Fitness = proporção de traces aceitos; não é acurácia de detecção. Divergência exige análise; atividade fora do modelo não comprova ataque."
+}
